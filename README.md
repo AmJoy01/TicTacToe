@@ -2,18 +2,19 @@
 
 ## Instructions
 
-- [] 3 X 3 grid
+- [ ] 3 X 3 grid
 
-- [] Make your mark
+- [ ] Make your mark
 
-- [] Take turns
+- [ ] Take turns
 
-- [] "X" and "O"
+- [ ] "X" and "O"
 
-- [] Win Logic:
-  - [] align 3 in a row,
-  - [] align 3 in a column
-  - [] align 3 in diagonally
+- [ ] Win Logic:
+  - [ ] align 3 in a row,
+  - [ ] align 3 in a column
+  - [ ] align 3 in diagonally
 
--[] Decalre a tie
--[] The game is finished
+-[ ] Decalre a tie
+
+-[ ] The game is finished
