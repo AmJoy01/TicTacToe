@@ -11,10 +11,11 @@
 - [ ] "X" and "O"
 
 - [ ] Win Logic:
+
   - [ ] align 3 in a row,
   - [ ] align 3 in a column
   - [ ] align 3 in diagonally
 
--[ ] Decalre a tie
+- [ ] Decalre a tie
 
--[ ] The game is finished
+- [ ] The game is finished
