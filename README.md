@@ -2,7 +2,7 @@
 
 ## Instructions
 
-- [ ] 3 X 3 grid
+- [x] 3 X 3 grid
 
 - [ ] Make your mark
 
