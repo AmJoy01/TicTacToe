@@ -23,15 +23,12 @@ const squares = Array.from(document.querySelectorAll('#board div'));
 const boardID = document.getElementById('board');
 const resetBtn = document.getElementById('reset-button');
 /*----- event listeners -----*/
-if (boardID) {
-    boardID.addEventListener('click', handleTurn);
-};
+boardID.addEventListener('click', handleTurn);
 
 const messages = document.querySelector('h2');
 
-if (resetBtn) {
-    resetBtn.addEventListener('click', init);
-}
+resetBtn.addEventListener('click', init);
+
 
 
 /*----- functions -----*/
@@ -66,13 +63,9 @@ function init() {
 function render() {
     board.forEach(function (mark, index) {
         console.log(mark, index);
-        if (squares[index]) {
-            squares[index].textContent = mark;
-        }
+        squares[index].textContent = mark;
     });
-    if (messages) {
-        messages.textContent = win === 'T' ? `That's a tie, queen!` : win ? `${win} wins the game!` : `It's ${turn}'s turn!`;
-    }
+    messages.textContent = win === 'T' ? `That's a tie, queen!` : win ? `${win} wins the game!` : `It's ${turn}'s turn!`;
 };
 
 init();
