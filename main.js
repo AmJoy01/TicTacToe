@@ -18,6 +18,9 @@ let turn = 'X';
 let win;
 
 /*----- cached element references -----*/
+const insertAfter = (el, htmlString) => {
+    el.insertAdjacentHTML('afterend', htmlString)
+}
 const squares = Array.from(document.querySelectorAll('#board div'));
 const messages = document.querySelector('h2');
 let boardId = document.getElementById('board');
@@ -44,6 +47,10 @@ function handleTurn() {
     board[idx] = turn;
     turn = turn === 'X' ? 'O' : 'X';
     win = getWinner();
+    if (win != null) {
+        boardId.removeEventListener('click', handleTurn)
+        addRestartMsg();
+    }
     render();
 };
 
@@ -63,5 +70,9 @@ function render() {
     });
     messages.textContent = win === 'T' ? `That's a tie, queen!` : win ? `${win} wins the game!` : `It's ${turn}'s turn!`;
 };
+
+function addRestartMsg() {
+    insertAfter(document.querySelector('h2'), '<p>Reset Board</p>')
+}
 
 init();
