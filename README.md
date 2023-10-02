@@ -1,5 +1,9 @@
 # Tic-Tac-Toe
 
+## Video
+
+![Tic Tac Toe](https://recordit.co/nPO6JLPNLF)
+
 ## Instructions
 
 ### HTML
@@ -23,18 +27,18 @@
 
 - [x] 3 X 3 grid
 
-- [ ] Make your mark
+- [x] Make your mark
 
-- [ ] Take turns
+- [x] Take turns
 
-- [ ] "X" and "O"
+- [x] "X" and "O"
 
-- [ ] Win Logic:
+- [x] Win Logic:
 
-  - [ ] align 3 in a row,
-  - [ ] align 3 in a column
-  - [ ] align 3 in diagonally
+  - [x] align 3 in a row,
+  - [x] align 3 in a column
+  - [x] align 3 in diagonally
 
-- [ ] Decalre a tie
+- [x] Declare a tie
 
-- [ ] The game is finished
+- [x] The game is finished
