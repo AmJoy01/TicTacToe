@@ -2,7 +2,11 @@
 
 ## Video
 
-![Tic Tac Toe](https://recordit.co/nPO6JLPNLF)
+![tictactoe](https://github.com/AmJoy01/TicTacToe/assets/93353341/9bc4b441-81df-4878-96f5-d82dd37405aa)
+
+
+Here's a longer video: [TicTacToe](https://github.com/AmJoy01/TicTacToe/assets/93353341/1f7912fc-6852-4fec-88a9-21670453c5a0)
+
 
 ## Instructions
 
