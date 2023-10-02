@@ -18,17 +18,13 @@ let turn = 'X';
 let win;
 
 /*----- cached element references -----*/
-
 const squares = Array.from(document.querySelectorAll('#board div'));
-const boardID = document.getElementById('board');
-const resetBtn = document.getElementById('reset-button');
-/*----- event listeners -----*/
-boardID.addEventListener('click', handleTurn);
-
 const messages = document.querySelector('h2');
-
+let boardId = document.getElementById('board');
+let resetBtn = document.getElementById('reset-button');
+/*----- event listeners -----*/
+boardId.addEventListener('click', handleTurn);
 resetBtn.addEventListener('click', init);
-
 
 
 /*----- functions -----*/
@@ -41,7 +37,7 @@ function getWinner() {
     return winner ? winner : board.includes('') ? null : 'T';
 };
 
-function handleTurn(event) {
+function handleTurn() {
     let idx = squares.findIndex(function (square) {
         return square === event.target;
     });
@@ -62,7 +58,7 @@ function init() {
 
 function render() {
     board.forEach(function (mark, index) {
-        console.log(mark, index);
+        //this moves the value of the board item into the squares[idx]
         squares[index].textContent = mark;
     });
     messages.textContent = win === 'T' ? `That's a tie, queen!` : win ? `${win} wins the game!` : `It's ${turn}'s turn!`;
