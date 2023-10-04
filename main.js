@@ -18,7 +18,7 @@ let turn = 'X';
 let win;
 
 /*----- cached element references -----*/
-const insertAfter = (el, htmlString) => {
+var insertAfter = (el, htmlString) => {
     el.insertAdjacentHTML('afterend', htmlString)
 }
 const squares = Array.from(document.querySelectorAll('#board div'));
@@ -60,6 +60,8 @@ function init() {
         '', '', '',
         '', '', ''
     ];
+    boardId.addEventListener('click', handleTurn)
+    document.querySelector('p').remove();
     render();
 };
 
