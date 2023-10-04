@@ -6,7 +6,7 @@
 
 Here's a longer video: 
 
-[TicTacToe](/https://github.com/AmJoy01/TicTacToe/assets/93353341/75ac3832-9fb8-403d-9182-c3ea0abcf36a)
+[TicTacToe](https://recordit.co/foMQWsjlkw)
 
 
 
