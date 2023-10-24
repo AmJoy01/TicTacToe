@@ -11,35 +11,53 @@ function App() {
     ];
 
     const [board, setBoard] = React.useState(["", "", "", "", "", "", "", "", ""]);
+    const [turn, setTurn] = React.useState('X');
+    const [win, setWin] = React.useState(null);
     let gameOver = false;
-    let turn = 'X';
-    let win;
 
     function handleTurn(event) {
-        let idx = event.taget.id;
-        if (gameOver == false) {
-            let newBoard = [...board]
-            newBoard[idx] = turn
-            setBoard(newBoard)
-            turn = turn === 'X' ? 'O' : 'X';
+        let idx = event.target.id;
+        if (board[idx] === '' && !win) {
+            let newBoard = [...board];
+            newBoard[idx] = turn;
+            setBoard(newBoard);
+            setTurn(turn === 'X' ? 'O' : 'X');
+            getWinner(newBoard);
         }
-        // win = getWinner();
-        // if (win != null) {
-        //     boardId.removeEventListener('click', handleTurn)
-        //     addRestartMsg();
-        // }
-        // render();
     };
 
+    function getWinner(board) {
+        winningCombos.forEach(combo => {
+            const [a, b, c] = combo;
+            if (board[a] &&
+                board[a] === board[b] &&
+                board[a] === board[c]) {
+                setWin(board[a]);
+            }
+            return;
+        });
+        if (board.every((square) => square !== '')) {
+            setWin('T');
+        }
+    }
 
+    function resetGame() {
+        setBoard(["", "", "", "", "", "", "", "", ""]);
+        setTurn('X');
+        setWin(null);
+    }
 
     // Return 
     return (
         <div>
             <h1>Tic-React-Toe</h1>
-            <h1>Tic-Tac-Toe</h1>
-            <h2>It's X's Turn</h2>
-
+            {/* <h2>It's X's Turn</h2> */}
+            <h2>
+                {win == 'T' ? `That's a tie, queen!`
+                    : win
+                        ? `${win} wins the game!`
+                        : `It's ${turn}'s turn!`}
+            </h2>
             <div className="flex-container flex-column">
                 <div className="flex-container flex-wrap" id="board" onClick={handleTurn}>
                     {board.map((value, idx) => {
@@ -48,8 +66,9 @@ function App() {
                         )
                     })}
                 </div>
+
                 {/* End of board */}
-                <button id="reset-button">reset</button>
+                <button id="reset-button" onClick={resetGame}>reset</button>
             </div>
             {/* End of column container div */}
         </div>
